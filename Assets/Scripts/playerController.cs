@@ -8,7 +8,7 @@ public class playerController : MonoBehaviour
     [SerializeField] private float speed = 10f;
 
     private CharacterController controller;
-    private Vector3 moveInput;
+    private Vector2 moveInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +18,7 @@ public class playerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector3>();
+        moveInput = context.ReadValue<Vector2>();
     }
     // Update is called once per frame
     void Update()
