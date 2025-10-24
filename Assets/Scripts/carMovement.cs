@@ -1,5 +1,8 @@
+using Unity.VisualScripting;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+
 
 public class carMovement : MonoBehaviour
 {
@@ -12,20 +15,35 @@ public class carMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+ 
     }
+
+ 
 
     void OnMove(InputValue movementValue)                   // This function is called when a move input is detected.
     {
-        Vector2 movementVector = movementValue.Get<Vector2>();               // Convert the input value into a Vector2 for movement.
+       Vector2 movementVector = movementValue.Get<Vector2>();               // Convert the input value into a Vector2 for movement.
         movementX = movementVector.x;                            // Store the X and Y components of the movement.
         movementY = movementVector.y;
     }
 
     private void FixedUpdate()                       // FixedUpdate is called once per fixed frame-rate frame.
     {
-        Vector3 movement = new Vector3(movementX, 0.0f, movementY);                  // Create a 3D movement vector using the X and Y inputs.
-        rb.AddForce(movement * carSpeed);                                        // Apply force to the Rigidbody to move the player.
+        Vector3 movement = new Vector3(movementX, 0.0f, movementY);     // Create a 3D movement vector using the X and Y inputs
+
+        rb.AddForce(movement * carSpeed);    // Apply force to the Rigidbody to move the player.
+   
+
+
+
+
+
+
+
+
+
     }
+
 
     // Update is called once per frame
     void Update()
@@ -33,3 +51,9 @@ public class carMovement : MonoBehaviour
         
     }
 }
+
+
+
+
+
+
