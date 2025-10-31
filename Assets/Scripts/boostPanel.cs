@@ -17,15 +17,16 @@ public class boostPanel : MonoBehaviour
      
     }
 
-    void onTriggerEnter(Collider player)
+    void OnTriggerEnter(Collider player)
     {
-        if (player == player1)
+        if (player.gameObject == player1)
         {
-            player1
-        else if (player == player2)
-            {
-
-            }
+            Debug.Log($"boost");
+            
         }
+        /*else if (player == player2)
+        {
+
+        }*/
     }
 }
