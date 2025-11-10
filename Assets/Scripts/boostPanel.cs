@@ -3,7 +3,7 @@ using UnityEngine;
 public class boostPanel : MonoBehaviour
 {
     public GameObject player1;
-    //public GameObject player2;
+    public GameObject player2;
     public float boostValue = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,9 +24,9 @@ public class boostPanel : MonoBehaviour
             Debug.Log($"boost");
             
         }
-        /*else if (player == player2)
+        else if (player == player2)
         {
-
-        }*/
+            Debug.Log($"boost");
+        }
     }
 }
