@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 514069461}
+  player2: {fileID: 0}
   boostValue: 0
 --- !u!65 &17859704
 BoxCollider:
@@ -443,7 +444,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91967bf38641a0e4ebba495786d58714, type: 2}
+  - {fileID: 2100000, guid: 0518a6212af5eb3479f39ed832f04b74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -506,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 514069461}
+  player2: {fileID: 0}
   boostValue: 0
 --- !u!65 &263483722
 BoxCollider:
@@ -676,7 +678,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91967bf38641a0e4ebba495786d58714, type: 2}
+  - {fileID: 2100000, guid: 9424d668d1e163b40ae5b53c308cef74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -856,7 +858,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3957204c5f62644484894a90db5c5ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 514069461}
+  player1: {fileID: 0}
+  player2: {fileID: 0}
   kickStrength: 10
 --- !u!65 &495942045
 BoxCollider:
@@ -1024,7 +1027,7 @@ Transform:
   m_GameObject: {fileID: 514069461}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -24.5}
+  m_LocalPosition: {x: 30.2, y: 1, z: -24.5}
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1385,8 +1388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 495942037}
-  Player1: {fileID: 514069461}
-  Player2: {fileID: 0}
+  Player1: {fileID: 549775463}
+  Player2: {fileID: 1818932391}
   scoreManager: {fileID: 2030403658}
 --- !u!64 &636086558
 MeshCollider:
@@ -1588,8 +1591,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ball: {fileID: 495942037}
-  Player1: {fileID: 514069461}
-  Player2: {fileID: 0}
+  Player1: {fileID: 549775463}
+  Player2: {fileID: 1818932391}
   player2Points: 0
   scoreManager: {fileID: 2030403658}
 --- !u!1 &927801455
@@ -1625,6 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player1: {fileID: 514069461}
+  player2: {fileID: 0}
   boostValue: 0
 --- !u!65 &927801457
 BoxCollider:
@@ -2107,7 +2111,7 @@ Canvas:
   m_GameObject: {fileID: 1434813450}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 939017167}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -2221,7 +2225,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91967bf38641a0e4ebba495786d58714, type: 2}
+  - {fileID: 2100000, guid: 0518a6212af5eb3479f39ed832f04b74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2783,7 +2787,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 91967bf38641a0e4ebba495786d58714, type: 2}
+  - {fileID: 2100000, guid: 9424d668d1e163b40ae5b53c308cef74, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

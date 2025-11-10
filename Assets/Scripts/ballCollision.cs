@@ -3,7 +3,8 @@ using UnityEngine;
 public class ballCollision : MonoBehaviour
 {
     private Rigidbody rb;
-    public GameObject player;
+    public GameObject player1;
+    public GameObject player2;
     private float playerSpeed;
     private Vector3 playerDirection;
     public float kickStrength = 0;
@@ -21,12 +22,18 @@ public class ballCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider playerObject)
     {
-        playerSpeed = player.GetComponent<Rigidbody>().linearVelocity.magnitude;
-        playerDirection = player.GetComponent<Rigidbody>().linearVelocity.normalized;
-        Vector3 ballDirection = playerSpeed * playerDirection;
-
-        if (playerObject.gameObject == player)
+        if (playerObject.gameObject == player1)
         {
+            playerSpeed = player1.GetComponent<Rigidbody>().linearVelocity.magnitude;
+            playerDirection = player1.GetComponent<Rigidbody>().linearVelocity.normalized;
+            Vector3 ballDirection = playerSpeed * playerDirection;
+            rb.AddForce(ballDirection * kickStrength);
+        }
+        else if (playerObject.gameObject == player2)
+        {
+            playerSpeed = player2.GetComponent<Rigidbody>().linearVelocity.magnitude;
+            playerDirection = player2.GetComponent<Rigidbody>().linearVelocity.normalized;
+            Vector3 ballDirection = playerSpeed * playerDirection;
             rb.AddForce(ballDirection * kickStrength);
         }
     }
