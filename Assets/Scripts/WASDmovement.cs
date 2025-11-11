@@ -5,6 +5,7 @@ public class WASDmovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private Rigidbody rb;
 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,12 +20,12 @@ public class WASDmovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             move += Vector3.forward;
-            transform.Rotate(new Vector3(0, 0, 0) * Time.deltaTime);
+           // transform.Rotate(new Vector3(0, 0, 0) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
             move += Vector3.back;
-            transform.Rotate(new Vector3(0, 180, 0) * Time.deltaTime);
+           // transform.Rotate(new Vector3(0, 180, 0) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
