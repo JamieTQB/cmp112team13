@@ -22,6 +22,7 @@ public class ballCollision : MonoBehaviour
     }
     private void OnTriggerEnter(Collider playerObject)
     {
+        //this checks what player hit the ball, what way they were facing and how fast they were going to decide what way to 'kick' the ball
         if (playerObject.gameObject == player1)
         {
             playerSpeed = player1.GetComponent<Rigidbody>().linearVelocity.magnitude;
