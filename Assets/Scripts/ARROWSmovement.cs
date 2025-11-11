@@ -8,8 +8,7 @@ public class ARROWSmovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
+        rb=GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -19,11 +18,11 @@ public class ARROWSmovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move += Vector3.forward;
+            move += Vector3.back;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            move += Vector3.back;
+            move += Vector3.forward;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
