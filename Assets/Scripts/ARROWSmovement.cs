@@ -8,7 +8,7 @@ public class ARROWSmovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb.GetComponent<Rigidbody>();
+        rb=GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
 
