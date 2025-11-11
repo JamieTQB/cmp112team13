@@ -4,11 +4,10 @@ using System.Collections;
 
 public class scoreManager : MonoBehaviour
 {
-    //public GameObject goalOne;
-    //public GameObject goalTwo;
     public TextMeshProUGUI scoreboard;
     public float pOnePoints = 0;
     public float pTwoPoints = 0;
+    public float maxPoints = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,12 +22,14 @@ public class scoreManager : MonoBehaviour
 
     public void SetScoreboard()
     {
-        scoreboard.text = pOnePoints + " - P1 Score P2 - " + pTwoPoints; ;
-        if (pOnePoints == 5)
+        //immediately replacing the placeholder text, updates in real time when a player scores
+        scoreboard.text = pOnePoints + " - P1 Score P2 - " + pTwoPoints;
+        //
+        if (pOnePoints == maxPoints)
         {
             scoreboard.text = "Player 1 Wins!";
         }
-        else if (pTwoPoints == 5) 
+        else if (pTwoPoints == maxPoints) 
         {
             scoreboard.text = "Player 2 wins";
         }

@@ -16,21 +16,23 @@ public class ARROWSmovement : MonoBehaviour
     {
         Vector3 move = Vector3.zero;
 
+        //using rb.transform uses the rigidbody's local position instead of moving it relative to the world
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move += Vector3.back;
+            move += rb.transform.forward;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            move += Vector3.forward;
+            move -= rb.transform.forward;   
         }
+        //rotates where the object is facing, letting you turn right or left
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            move += Vector3.right;
+            rb.transform.Rotate(Vector3.up, Space.Self);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            move += Vector3.left;
+            rb.transform.Rotate(-Vector3.up, Space.Self);
         }
 
         move = move.normalized * speed;

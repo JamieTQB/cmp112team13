@@ -17,23 +17,23 @@ public class WASDmovement : MonoBehaviour
     {
         Vector3 move= Vector3.zero;
 
+        //using rb.transform uses the rigidbody's local position instead of moving it relative to the world
         if (Input.GetKey(KeyCode.W))
         {
-            move += Vector3.forward;
-           // transform.Rotate(new Vector3(0, 0, 0) * Time.deltaTime);
+            move += rb.transform.forward;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            move += Vector3.back;
-           // transform.Rotate(new Vector3(0, 180, 0) * Time.deltaTime);
+            move -= rb.transform.forward;
         }
+        //rotates where the object is facing, letting you turn right or left
         if (Input.GetKey(KeyCode.D))
         {
-            move += Vector3.right;
+            rb.transform.Rotate(Vector3.up, Space.Self);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            move += Vector3.left;
+            rb.transform.Rotate(-Vector3.up, Space.Self);
         }
 
         move = move.normalized * speed;
