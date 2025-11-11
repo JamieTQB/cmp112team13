@@ -9,7 +9,6 @@ public class ARROWSmovement : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -19,11 +18,11 @@ public class ARROWSmovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            move += Vector3.forward;
+            move += Vector3.back;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            move += Vector3.back;
+            move += Vector3.forward;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {

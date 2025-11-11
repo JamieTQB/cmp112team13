@@ -9,7 +9,6 @@ public class WASDmovement : MonoBehaviour
     void Start()
     {
         rb=GetComponent<Rigidbody>();
-        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -20,10 +19,12 @@ public class WASDmovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
             move += Vector3.forward;
+            transform.Rotate(new Vector3(0, 0, 0) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
             move += Vector3.back;
+            transform.Rotate(new Vector3(0, 180, 0) * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
