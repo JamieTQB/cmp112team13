@@ -22,7 +22,7 @@ public class boostPanel : MonoBehaviour
     {
         if (player.gameObject == player1)
         {
-            Debug.Log($"boost");
+            
             
 
 
