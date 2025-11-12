@@ -1,21 +1,25 @@
+using System.Collections;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class WASDmovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Rigidbody rb;
+    public GameObject panel1, panel2, panel3, panel4, panel5;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        rb=GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+ 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 move= Vector3.zero;
+        Vector3 move = Vector3.zero;
 
         //using rb.transform uses the rigidbody's local position instead of moving it relative to the world
         if (Input.GetKey(KeyCode.W))
@@ -39,4 +43,23 @@ public class WASDmovement : MonoBehaviour
         move = move.normalized * speed;
         rb.linearVelocity = new Vector3(move.x, rb.linearVelocity.y, move.z);
     }
+
+
+    private void OnTriggerEnter(Collider pad)
+    {
+        if(pad.gameObject==panel1 || pad.gameObject == panel2 || pad.gameObject == panel3 || pad.gameObject == panel4 || pad.gameObject == panel5)
+        {
+            StartCoroutine(Boosting());
+        }
+    }
+
+    IEnumerator Boosting()
+    {
+        speed= speed * 1.5f;
+        yield return new WaitForSeconds(1f);
+        speed= speed / 1.5f;
+    }
 }
+
+
+

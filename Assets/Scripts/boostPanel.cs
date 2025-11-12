@@ -1,9 +1,12 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class boostPanel : MonoBehaviour
 {
     public GameObject player1;
     public GameObject player2;
+    private float player1Speed;
+    private float player2Speed;
 
     public float boostValue = 0;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,19 +21,9 @@ public class boostPanel : MonoBehaviour
      
     }
 
-    void OnTriggerEnter(Collider player)
+    private void OnTriggerEnter(Collider playerObject)
     {
-        if (player.gameObject == player1)
-        {
-            Debug.Log($"boost");
-            
 
 
-            
-        }
-        else if (player.gameObject == player2)
-        {
-
-        }
     }
 }
