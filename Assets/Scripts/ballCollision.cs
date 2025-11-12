@@ -5,6 +5,11 @@ public class ballCollision : MonoBehaviour
     private Rigidbody rb;
     public GameObject player1;
     public GameObject player2;
+    public GameObject northWall;
+    public GameObject southWall;
+    public GameObject eastWall;
+    public GameObject westWall;
+    public GameObject ground;
     private float playerSpeed;
     private Vector3 playerDirection;
     public float kickStrength = 0;
@@ -20,22 +25,47 @@ public class ballCollision : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider playerObject)
+    private void OnTriggerEnter(Collider otherObject)
     {
         //this checks what player hit the ball, what way they were facing and how fast they were going to decide what way to 'kick' the ball
-        if (playerObject.gameObject == player1)
+        if (otherObject.gameObject == player1)
         {
             playerSpeed = player1.GetComponent<Rigidbody>().linearVelocity.magnitude;
             playerDirection = player1.GetComponent<Rigidbody>().linearVelocity.normalized;
             Vector3 ballDirection = playerSpeed * playerDirection;
             rb.AddForce(ballDirection * kickStrength);
         }
-        else if (playerObject.gameObject == player2)
+        else if (otherObject.gameObject == player2)
         {
             playerSpeed = player2.GetComponent<Rigidbody>().linearVelocity.magnitude;
             playerDirection = player2.GetComponent<Rigidbody>().linearVelocity.normalized;
             Vector3 ballDirection = playerSpeed * playerDirection;
             rb.AddForce(ballDirection * kickStrength);
+        }
+        //this checks if the ball has hit a wall, determines what wall, and bounces it away from the edge
+        if (otherObject.gameObject == northWall)
+        {
+            Debug.Log("hit the north wall");
+            Vector3 ballDirection = rb.linearVelocity;
+            rb.AddForce(-ballDirection * 20);
+        }
+        if (otherObject.gameObject == southWall)
+        {
+            Debug.Log("hit the south wall");
+            Vector3 ballDirection = rb.linearVelocity;
+            rb.AddForce(-ballDirection * 20);
+        }
+        if (otherObject.gameObject == eastWall)
+        {
+            Debug.Log("hit the east wall");
+            Vector3 ballDirection = rb.linearVelocity;
+            rb.AddForce(-ballDirection * 20);
+        }
+        if (otherObject.gameObject == westWall)
+        {
+            Debug.Log("hit the west wall");
+            Vector3 ballDirection = rb.linearVelocity;
+            rb.AddForce(-ballDirection * 20);
         }
     }
 }
