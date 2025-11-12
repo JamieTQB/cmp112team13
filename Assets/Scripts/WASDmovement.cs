@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 
@@ -5,7 +6,7 @@ public class WASDmovement : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
     private Rigidbody rb;
-    public GameObject boostPad;
+    public GameObject panel1, panel2, panel3, panel4, panel5;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -44,19 +45,21 @@ public class WASDmovement : MonoBehaviour
     }
 
 
-
-
-    void OnTriggerEnter(Collider panel)
+    private void OnTriggerEnter(Collider pad)
     {
-        if (panel.gameObject == boostPad )
+        if(pad.gameObject==panel1 || pad.gameObject == panel2 || pad.gameObject == panel3 || pad.gameObject == panel4 || pad.gameObject == panel5)
         {
-
-            speed = speed + 5f;
-
-
-
+            StartCoroutine(Boosting());
         }
     }
+
+    IEnumerator Boosting()
+    {
+        speed= speed * 1.5f;
+        yield return new WaitForSeconds(1f);
+        speed= speed / 1.5f;
+    }
 }
+
 
 
