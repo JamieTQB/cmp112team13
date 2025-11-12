@@ -7,6 +7,7 @@ public class WASDmovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     private Rigidbody rb;
     public GameObject panel1, panel2, panel3, panel4, panel5;
+    [SerializeField] private float boostMultiplier;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -55,9 +56,9 @@ public class WASDmovement : MonoBehaviour
 
     IEnumerator Boosting()
     {
-        speed= speed * 1.5f;
-        yield return new WaitForSeconds(1f);
-        speed= speed / 1.5f;
+        speed= speed * boostMultiplier;
+        yield return new WaitForSeconds(0.7f);
+        speed= speed / boostMultiplier;
     }
 }
 
