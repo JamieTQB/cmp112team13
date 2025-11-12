@@ -876,6 +876,7 @@ MonoBehaviour:
   panel3: {fileID: 857757276}
   panel4: {fileID: 1090874553}
   panel5: {fileID: 884033678}
+  boostMultiplier: 1.3
 --- !u!4 &549775466
 Transform:
   m_ObjectHideFlags: 0
@@ -2855,6 +2856,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  panel1: {fileID: 1134207385}
+  panel2: {fileID: 2102485893}
+  panel3: {fileID: 857757276}
+  panel4: {fileID: 1090874553}
+  panel5: {fileID: 884033678}
+  boostMultiplier: 1.3
 --- !u!4 &1818932394
 Transform:
   m_ObjectHideFlags: 0
