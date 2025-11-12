@@ -31,11 +31,11 @@ public class ARROWSmovement : MonoBehaviour
         //rotates where the object is facing, letting you turn right or left
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            rb.transform.Rotate(Vector3.up, Space.Self);
+            rb.transform.Rotate(Vector3.up * 2, Space.Self);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            rb.transform.Rotate(-Vector3.up, Space.Self);
+            rb.transform.Rotate(-Vector3.up * 2, Space.Self);
         }
 
         move = move.normalized * speed;

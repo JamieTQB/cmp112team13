@@ -41,26 +41,5 @@ public class ballCollision : MonoBehaviour
             Vector3 ballDirection = playerSpeed * playerDirection;
             rb.AddForce(ballDirection * kickStrength);
         }
-        //this checks if the ball has hit a wall, determines what wall, and bounces it away from the edge
-        if (otherObject.gameObject == northWall)
-        { 
-            Vector3 ballDirection = rb.linearVelocity;
-            rb.AddForce(-ballDirection * 20);
-        }
-        if (otherObject.gameObject == southWall)
-        { 
-            Vector3 ballDirection = rb.linearVelocity;
-            rb.AddForce(-ballDirection * 20);
-        }
-        if (otherObject.gameObject == eastWall)
-        {
-            Vector3 ballDirection = rb.linearVelocity;
-            rb.AddForce(-ballDirection * 20);
-        }
-        if (otherObject.gameObject == westWall)
-        {
-            Vector3 ballDirection = rb.linearVelocity;
-            rb.AddForce(-ballDirection * 20);
-        }
     }
 }
