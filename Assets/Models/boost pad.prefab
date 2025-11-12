@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5352203349734946989}
   - component: {fileID: 5031524683119926912}
   - component: {fileID: 8901334432345007436}
-  - component: {fileID: 1973201004037945129}
   m_Layer: 0
   m_Name: boost pad
   m_TagString: Untagged
@@ -109,18 +108,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 0, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1973201004037945129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2983280498011583551}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da99934d3458e24c8c11f90e18aa3e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  boostValue: 0

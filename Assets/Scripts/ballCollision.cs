@@ -9,7 +9,6 @@ public class ballCollision : MonoBehaviour
     public GameObject southWall;
     public GameObject eastWall;
     public GameObject westWall;
-    public GameObject ground;
     private float playerSpeed;
     private Vector3 playerDirection;
     public float kickStrength = 0;
@@ -44,26 +43,22 @@ public class ballCollision : MonoBehaviour
         }
         //this checks if the ball has hit a wall, determines what wall, and bounces it away from the edge
         if (otherObject.gameObject == northWall)
-        {
-            Debug.Log("hit the north wall");
+        { 
             Vector3 ballDirection = rb.linearVelocity;
             rb.AddForce(-ballDirection * 20);
         }
         if (otherObject.gameObject == southWall)
-        {
-            Debug.Log("hit the south wall");
+        { 
             Vector3 ballDirection = rb.linearVelocity;
             rb.AddForce(-ballDirection * 20);
         }
         if (otherObject.gameObject == eastWall)
         {
-            Debug.Log("hit the east wall");
             Vector3 ballDirection = rb.linearVelocity;
             rb.AddForce(-ballDirection * 20);
         }
         if (otherObject.gameObject == westWall)
         {
-            Debug.Log("hit the west wall");
             Vector3 ballDirection = rb.linearVelocity;
             rb.AddForce(-ballDirection * 20);
         }

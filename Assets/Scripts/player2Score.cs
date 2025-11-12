@@ -48,7 +48,7 @@ public class PlayerTwoScore : MonoBehaviour
     
     IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(3f);    //makes the game wait for 3 seconds before executing the rest of the coroutine
+        yield return new WaitForSeconds(1.5f);    //makes the game wait for 3 seconds before executing the rest of the coroutine
         //the small block below just resets the ball and each player to the initial position, and resets all speed, rotation, and momentum to have them stopped and rotated the correct way                         
         Ball.transform.position = ballSpawn;
         rb.angularVelocity = Vector3.zero;

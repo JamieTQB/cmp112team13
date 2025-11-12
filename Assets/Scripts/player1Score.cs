@@ -15,6 +15,7 @@ public class PlayerOneScore : MonoBehaviour
     Vector3 player2Spawn; 
     public scoreManager scoreManager;
     
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,17 +40,17 @@ public class PlayerOneScore : MonoBehaviour
 
 
         //if loop checks if the colliding obect is the ball's sphere collider and then resets the players and ball
-        if (collider.GetType().ToString() == "UnityEngine.SphereCollider")    
-        {
+        if (collider.GetType().ToString() == "UnityEngine.SphereCollider")
+        { 
             scoreManager.pOnePoints += 1;
             scoreManager.SetScoreboard();
-            StartCoroutine(Respawn());
+            StartCoroutine(Respawn());            
         }
     }
    
     IEnumerator Respawn()
     {
-        yield return new WaitForSeconds(3f);    //game waits 3 seconds before resetting everything
+        yield return new WaitForSeconds(1.5f);    //game waits 3 seconds before resetting everything
         //the block here is the same as in player2score script, which resets each player to starting positions, the ball to the centre of the field, and sets each objects speed and momentum to zero, and makes sure each player is facing the right way to move on to the next round
         Ball.transform.position = ballSpawn;
         rb.angularVelocity = Vector3.zero;

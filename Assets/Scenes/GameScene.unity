@@ -292,7 +292,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1973201004037945129, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -673,7 +686,6 @@ MonoBehaviour:
   southWall: {fileID: 2110700240}
   eastWall: {fileID: 571930269}
   westWall: {fileID: 1121239272}
-  ground: {fileID: 1515506838}
   kickStrength: 10
 --- !u!65 &495942045
 BoxCollider:
@@ -1207,7 +1219,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1973201004037945129, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1393,7 +1418,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1973201004037945129, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1597,7 +1635,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.z
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1973201004037945129, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1853,13 +1904,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
       propertyPath: m_Size.x
-      value: 7
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8901334432345007436, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
       propertyPath: m_Size.z
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1973201004037945129, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2958,7 +3014,7 @@ MonoBehaviour:
   scoreboard: {fileID: 1708300360}
   pOnePoints: 0
   pTwoPoints: 0
-  maxPoints: 2
+  maxPoints: 4
 --- !u!1 &2102485893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2983280498011583551, guid: e132c07f96ee3af4d8332e3f9bad3a6b, type: 3}

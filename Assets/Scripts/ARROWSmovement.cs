@@ -15,7 +15,7 @@ public class ARROWSmovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 move = Vector3.zero;
 
